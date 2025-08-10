@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EF985BD32E48835E00F35465 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BCE2E48835E00F35465 /* ContentView.swift */; };
+		EF985BD42E48835E00F35465 /* ExchangeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BCF2E48835E00F35465 /* ExchangeInfoView.swift */; };
+		EF985BD52E48835E00F35465 /* LOTR18App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BD02E48835E00F35465 /* LOTR18App.swift */; };
+		EF985BD62E48835E00F35465 /* SelectCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */; };
+		EF985BD72E48835E00F35465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF985BCD2E48835E00F35465 /* Assets.xcassets */; };
+		EF985BD92E48873800F35465 /* CurrencyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BD82E48873800F35465 /* CurrencyIcon.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EF0B830E2E42C10500705602 /* LOTR18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTR18.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF985BCD2E48835E00F35465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF985BCE2E48835E00F35465 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF985BCF2E48835E00F35465 /* ExchangeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfoView.swift; sourceTree = "<group>"; };
+		EF985BD02E48835E00F35465 /* LOTR18App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTR18App.swift; sourceTree = "<group>"; };
+		EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyView.swift; sourceTree = "<group>"; };
+		EF985BD82E48873800F35465 /* CurrencyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EF0B83102E42C10500705602 /* LOTR18 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LOTR18;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EF0B830B2E42C10500705602 /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		EF0B83052E42C10500705602 = {
 			isa = PBXGroup;
 			children = (
-				EF0B83102E42C10500705602 /* LOTR18 */,
+				EF985BD22E48835E00F35465 /* LOTR18 */,
 				EF0B830F2E42C10500705602 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,19 @@
 				EF0B830E2E42C10500705602 /* LOTR18.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EF985BD22E48835E00F35465 /* LOTR18 */ = {
+			isa = PBXGroup;
+			children = (
+				EF985BCD2E48835E00F35465 /* Assets.xcassets */,
+				EF985BCE2E48835E00F35465 /* ContentView.swift */,
+				EF985BCF2E48835E00F35465 /* ExchangeInfoView.swift */,
+				EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */,
+				EF985BD82E48873800F35465 /* CurrencyIcon.swift */,
+				EF985BD02E48835E00F35465 /* LOTR18App.swift */,
+			);
+			path = LOTR18;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +79,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EF0B83102E42C10500705602 /* LOTR18 */,
 			);
 			name = LOTR18;
 			packageProductDependencies = (
@@ -109,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF985BD72E48835E00F35465 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +137,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF985BD32E48835E00F35465 /* ContentView.swift in Sources */,
+				EF985BD42E48835E00F35465 /* ExchangeInfoView.swift in Sources */,
+				EF985BD52E48835E00F35465 /* LOTR18App.swift in Sources */,
+				EF985BD62E48835E00F35465 /* SelectCurrencyView.swift in Sources */,
+				EF985BD92E48873800F35465 /* CurrencyIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

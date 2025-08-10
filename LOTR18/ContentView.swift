@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var leftAmount: String = ""
     @State private var rightAmount: String = ""
+    @State private var showExchangeInfo: Bool = false
     
     var body: some View {
         ZStack {
@@ -21,10 +22,10 @@ struct ContentView: View {
                 Image(.prancingpony)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 150)
+                    .frame(height: 200)
                 
                 Text("Currency Exchange")
-                    .font(.system(size: 40))
+                    .font(.largeTitle)
                     .foregroundStyle(.white)
                 
                 HStack {
@@ -32,52 +33,74 @@ struct ContentView: View {
                     VStack {
                         //Currency
                         HStack {
-                            Image(.copperpenny)
+                            Image(.silverpiece)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 35)
+                                .frame(width: 33)
                             
-                            Text("Copper Penny")
+                            Text("Silver Piece")
                                 .font(.headline)
                                 .foregroundStyle(.white)
                         }
+                        .padding(.bottom, -5)
                         
                         //TextField
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
+                        
                     }
                     
                     //Equal Sign
                     Image(systemName: "equal")
-                        .font(.system(size: 40))
+                        .font(.largeTitle)
                         .foregroundStyle(.white)
+                        .symbolEffect(.pulse)
                     
                     
                     //Right Conversion
                     VStack {
                         //Currency
                         HStack {
-                            Text("Gold Penny")
+                            Text("Gold Piece")
                                 .font(.headline)
                                 .foregroundStyle(.white)
                             
-                            Image(.goldpenny)
+                            Image(.goldpiece)
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 35)
+                                .frame(width: 33)
                             
                         }
+                        .padding(.bottom, -5)
                         
                         //TextField
                         TextField("Amount", text: $rightAmount)
                             .textFieldStyle(.roundedBorder)
+                            .multilineTextAlignment(.trailing)
                     }
                 }
                 .padding()
-                .background(Color.black.opacity(0.3))
+                .background(Color.black.opacity(0.5))
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 
                 Spacer()
+                
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        showExchangeInfo = true
+                    } label: {
+                        Image(systemName: "info.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(.white)
+                            .padding(.trailing)
+                    }
+                }
             }
+        }
+        .sheet(isPresented: $showExchangeInfo) {
+            ExchangeInfoView()
         }
     }
 }
