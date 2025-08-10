@@ -7,36 +7,6 @@
 
 import SwiftUI
 
-enum Currency: Identifiable, CaseIterable {
-    case goldpiece
-    case goldpenny
-    case silverpiece
-    case silverpenny
-    case copperpenny
-    
-    var id: UUID { UUID() }
-    
-    var image: ImageResource {
-        switch self {
-        case .goldpiece: .goldpiece
-        case .goldpenny: .goldpenny
-        case .silverpiece: .silverpiece
-        case .silverpenny: .silverpenny
-        case .copperpenny: .copperpenny
-        }
-    }
-    
-    var name: String {
-        switch self {
-        case .goldpiece: "Gold Piece"
-        case .goldpenny: "Gold Penny"
-        case .silverpiece: "Silver Piece"
-        case .silverpenny: "Silver Penny"
-        case .copperpenny: "Copper Penny"
-        }
-    }
-}
-
 struct SelectCurrencyView: View {
     @Environment(\.dismiss) var dismiss
     

@@ -13,6 +13,7 @@
 		EF985BD62E48835E00F35465 /* SelectCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */; };
 		EF985BD72E48835E00F35465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF985BCD2E48835E00F35465 /* Assets.xcassets */; };
 		EF985BD92E48873800F35465 /* CurrencyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BD82E48873800F35465 /* CurrencyIcon.swift */; };
+		EF985BDB2E48B07A00F35465 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BDA2E48B07300F35465 /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		EF985BD02E48835E00F35465 /* LOTR18App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTR18App.swift; sourceTree = "<group>"; };
 		EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyView.swift; sourceTree = "<group>"; };
 		EF985BD82E48873800F35465 /* CurrencyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIcon.swift; sourceTree = "<group>"; };
+		EF985BDA2E48B07300F35465 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				EF985BCF2E48835E00F35465 /* ExchangeInfoView.swift */,
 				EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */,
 				EF985BD82E48873800F35465 /* CurrencyIcon.swift */,
+				EF985BDA2E48B07300F35465 /* Currency.swift */,
 				EF985BD02E48835E00F35465 /* LOTR18App.swift */,
 			);
 			path = LOTR18;
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF985BDB2E48B07A00F35465 /* Currency.swift in Sources */,
 				EF985BD32E48835E00F35465 /* ContentView.swift in Sources */,
 				EF985BD42E48835E00F35465 /* ExchangeInfoView.swift in Sources */,
 				EF985BD52E48835E00F35465 /* LOTR18App.swift in Sources */,
