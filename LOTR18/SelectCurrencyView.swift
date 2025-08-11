@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SelectCurrencyView: View {
+    @Environment(CurrencyConversion.self) var currencyConversion
     @Environment(\.dismiss) var dismiss
+    let gridColumns: [GridItem] = [GridItem(), GridItem(), GridItem()]
     
     var body: some View {
         ZStack {
@@ -23,9 +25,18 @@ struct SelectCurrencyView: View {
                     .bold()
                 
                 //Currency Icons
-                LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
+                LazyVGrid(columns: gridColumns) {
                     ForEach(Currency.allCases) { currency in
-                        CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                        CurrencyIcon(currency: currency)
+                            .onTapGesture {
+                                currencyConversion.leftCurrency = currency
+                            }
+                            .overlay {
+                                if currencyConversion.leftCurrency == currency {
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .stroke(lineWidth: 3)
+                                }
+                            }
                     }
                 }
                 
@@ -35,6 +46,20 @@ struct SelectCurrencyView: View {
                     
                 
                 //Currency Icons
+                LazyVGrid(columns: gridColumns) {
+                    ForEach(Currency.allCases) { currency in
+                        CurrencyIcon(currency: currency)
+                            .onTapGesture {
+                                currencyConversion.rightCurrency = currency
+                            }
+                            .overlay {
+                                if currencyConversion.rightCurrency == currency {
+                                    RoundedRectangle(cornerRadius: 25)
+                                        .stroke(lineWidth: 3)
+                                }
+                            }
+                    }
+                }
                 
                 //Done Button
                 Button("Done") {
@@ -53,5 +78,6 @@ struct SelectCurrencyView: View {
 
 #Preview {
     SelectCurrencyView()
+        .environment(CurrencyConversion())
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF35249D2E499B430045C36F /* CurrencyConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35249C2E499B430045C36F /* CurrencyConversion.swift */; };
 		EF985BD32E48835E00F35465 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BCE2E48835E00F35465 /* ContentView.swift */; };
 		EF985BD42E48835E00F35465 /* ExchangeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BCF2E48835E00F35465 /* ExchangeInfoView.swift */; };
 		EF985BD52E48835E00F35465 /* LOTR18App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF985BD02E48835E00F35465 /* LOTR18App.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		EF0B830E2E42C10500705602 /* LOTR18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTR18.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF35249C2E499B430045C36F /* CurrencyConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversion.swift; sourceTree = "<group>"; };
 		EF985BCD2E48835E00F35465 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF985BCE2E48835E00F35465 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF985BCF2E48835E00F35465 /* ExchangeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfoView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EF985BD12E48835E00F35465 /* SelectCurrencyView.swift */,
 				EF985BD82E48873800F35465 /* CurrencyIcon.swift */,
 				EF985BDA2E48B07300F35465 /* Currency.swift */,
+				EF35249C2E499B430045C36F /* CurrencyConversion.swift */,
 				EF985BD02E48835E00F35465 /* LOTR18App.swift */,
 			);
 			path = LOTR18;
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF35249D2E499B430045C36F /* CurrencyConversion.swift in Sources */,
 				EF985BDB2E48B07A00F35465 /* Currency.swift in Sources */,
 				EF985BD32E48835E00F35465 /* ContentView.swift in Sources */,
 				EF985BD42E48835E00F35465 /* ExchangeInfoView.swift in Sources */,

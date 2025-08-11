@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var leftAmount: String = ""
-    @State private var rightAmount: String = ""
+    @Environment(CurrencyConversion.self) var currencyConversion
     @State private var showExchangeInfo: Bool = false
+    @State private var showSelectCurrency: Bool = false
     
     var body: some View {
+        @Bindable var currencyConversion = currencyConversion
         ZStack {
             Image(.background)
                 .resizable()
@@ -32,20 +33,24 @@ struct ContentView: View {
                     //Left Conversion
                     VStack {
                         //Currency
-                        HStack {
-                            Image(.silverpiece)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 33)
-                            
-                            Text("Silver Piece")
-                                .font(.headline)
-                                .foregroundStyle(.white)
+                        Button {
+                            showSelectCurrency = true
+                        } label: {
+                            HStack {
+                                Image(currencyConversion.leftCurrency.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 33)
+                                
+                                Text(currencyConversion.leftCurrency.name)
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                            }
+                            .padding(.bottom, -5)
                         }
-                        .padding(.bottom, -5)
                         
                         //TextField
-                        TextField("Amount", text: $leftAmount)
+                        TextField("Amount", text: $currencyConversion.leftAmount)
                             .textFieldStyle(.roundedBorder)
                         
                     }
@@ -60,21 +65,25 @@ struct ContentView: View {
                     //Right Conversion
                     VStack {
                         //Currency
-                        HStack {
-                            Text("Gold Piece")
-                                .font(.headline)
-                                .foregroundStyle(.white)
-                            
-                            Image(.goldpiece)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 33)
-                            
+                        Button {
+                            showSelectCurrency = true
+                        } label: {
+                            HStack {
+                                Text(currencyConversion.rightCurrency.name)
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                                
+                                Image(currencyConversion.rightCurrency.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 33)
+                                
+                            }
+                            .padding(.bottom, -5)
                         }
-                        .padding(.bottom, -5)
                         
                         //TextField
-                        TextField("Amount", text: $rightAmount)
+                        TextField("Amount", text: $currencyConversion.rightAmount)
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)
                     }
@@ -102,9 +111,13 @@ struct ContentView: View {
         .sheet(isPresented: $showExchangeInfo) {
             ExchangeInfoView()
         }
+        .sheet(isPresented: $showSelectCurrency) {
+            SelectCurrencyView()
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environment(CurrencyConversion())
 }
